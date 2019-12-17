@@ -37,8 +37,8 @@ drone.list \
 all: drone.elf secondary-outputs
 
 # Tool invocations
-drone.elf: $(OBJS) $(USER_OBJS) C:\Users\61301765\STM32CubeIDE\workspace_1.1.0\drone\STM32F103C8TX_FLASH.ld
-	arm-none-eabi-gcc -o "drone.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\61301765\STM32CubeIDE\workspace_1.1.0\drone\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drone.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+drone.elf: $(OBJS) $(USER_OBJS) C:\Users\jj\STM32CubeIDE\workspace_1.1.0\drone\STM32F103C8TX_FLASH.ld
+	arm-none-eabi-gcc -o "drone.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\jj\STM32CubeIDE\workspace_1.1.0\drone\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="drone.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
